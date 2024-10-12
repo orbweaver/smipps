@@ -13,14 +13,6 @@ class Curve_fitting():
                 self.__custom_index = [df.index[-2] + pd.DateOffset(years=1+i) for i in range(0, FC_length)]
             else:
                 prev_ind = df.index[-1]
-                #def next_month_year(prev_ind):
-                    # month, year = prev_ind.split(':')
-                    # if int(month)<12:
-                    #     string = str(int(month)+1)+':'+year
-                    #     return string
-                    # else:
-                    #     string = str(1)+':'+str((int(year)+1))
-                    #     return string
                 self.__custom_index = [(prev_ind)]
                 for i in range(FC_length-1):
                      last_el = self.__custom_index[-1]
